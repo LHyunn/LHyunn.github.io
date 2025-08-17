@@ -1,14 +1,14 @@
 [
     {
-        "title": "My First Research Project",
-        "summary": "A brief summary of the research, focusing on the key objectives and outcomes.",
-        "path": "_research/my-first-research.md",
+        "title": "OHT Wheel Anomaly Detection",
+        "summary": "Anomaly detection for OHT guide wheels in semiconductor manufacturing using deep learning and data augmentation.",
+        "path": "_research/semes-oht-anomaly-detection.md",
         "category": "Machine Learning"
     },
     {
-        "title": "A Study on Convex Optimization",
-        "summary": "Exploring the fundamentals of convex optimization and its applications in engineering.",
-        "path": "_research/optimization-study.md",
+        "title": "Manufacturing Process Optimization",
+        "summary": "A language model-based approach for quality prediction and process route recommendation in multi-stage manufacturing.",
+        "path": "_research/manufacturing-process-optimization.md",
         "category": "Optimization"
     }
 ]

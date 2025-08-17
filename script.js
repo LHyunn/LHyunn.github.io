@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const postContent = document.getElementById('post-content');
     
     // Header Links
-    const blogLink = document.getElementById('blog-link');
+    const homeLink = document.getElementById('home-link');
     const researchLink = document.getElementById('research-link');
     const aboutLink = document.getElementById('about-link');
 
@@ -29,15 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // Populates the sidebar with a list of items (blog posts or research)
-    function populateSidebar(type) {
-        const isBlog = type === 'blog';
-        const jsonPath = isBlog ? 'posts.json' : 'research.json';
-        sidebarTitle.textContent = isBlog ? 'Posts' : 'Research';
+    // Populates the sidebar with the list of research items
+    function populateSidebar() {
+        sidebarTitle.textContent = 'Research';
 
-        fetch(jsonPath)
+        fetch('research.json')
             .then(response => {
-                if (!response.ok) throw new Error(`Failed to load ${jsonPath}`);
+                if (!response.ok) throw new Error(`Failed to load research.json`);
                 return response.json();
             })
             .then(items => {
@@ -106,14 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Page Loaders ---
 
-    function showBlogView() {
-        mainContainer.classList.remove('sidebar-hidden');
-        populateSidebar('blog');
-    }
-
     function showResearchView() {
         mainContainer.classList.remove('sidebar-hidden');
-        populateSidebar('research');
+        populateSidebar();
     }
 
     function showAboutView() {
@@ -126,9 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Event Listeners ---
 
-    blogLink.addEventListener('click', (e) => {
+    homeLink.addEventListener('click', (e) => {
         e.preventDefault();
-        showBlogView();
+        showAboutView();
     });
 
     researchLink.addEventListener('click', (e) => {
