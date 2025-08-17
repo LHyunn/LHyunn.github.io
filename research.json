@@ -1,0 +1,14 @@
+[
+    {
+        "title": "My First Research Project",
+        "summary": "A brief summary of the research, focusing on the key objectives and outcomes.",
+        "path": "_research/my-first-research.md",
+        "category": "Machine Learning"
+    },
+    {
+        "title": "A Study on Convex Optimization",
+        "summary": "Exploring the fundamentals of convex optimization and its applications in engineering.",
+        "path": "_research/optimization-study.md",
+        "category": "Optimization"
+    }
+]

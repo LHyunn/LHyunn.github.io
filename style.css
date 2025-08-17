@@ -6,6 +6,7 @@ body {
     background-color: #ffffff;
     margin: 0;
     display: flex;
+    flex-direction: column; /* Arrange children vertically */
     height: 100vh;
 }
 
@@ -25,13 +26,13 @@ body {
     color: #9b9a97;
 }
 
-#post-list {
+#sidebar-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#post-list li {
+#sidebar-list li {
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 4px;
@@ -39,19 +40,89 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-#post-list li:hover {
+#sidebar-list li:not(.sidebar-category):hover {
     background-color: #edece9;
+    transform: translateX(4px);
 }
 
-#post-list li.active {
+#sidebar-list li.active {
     background-color: #e2e1de;
     font-weight: 600;
 }
 
+/* Sidebar Category Styles */
+.sidebar-category {
+    padding: 16px 12px 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #9b9a97;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: default;
+}
+
+
+
+/* Header Styles */
+#page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 60px;
+    border-bottom: 1px solid #edece9;
+    background-color: #ffffff;
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.header-title a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.header-title a:hover {
+    color: #4a90e2;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #37352f;
+    font-size: 16px;
+    transition: color 0.2s ease-in-out;
+}
+
+.header-nav a:hover {
+    color: #4a90e2;
+}
+
+.header-nav svg {
+    display: block;
+}
 
 /* Content Area Styles */
+.content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow-y: hidden; /* Prevent double scrollbars */
+    transition: all 0.3s ease-in-out;
+}
+
+.content-wrapper.sidebar-hidden #sidebar {
+    display: none;
+}
+
+
 #content {
     flex-grow: 1;
     padding: 40px 60px;
@@ -138,4 +209,35 @@ body {
     padding: .2em .4em;
     border-radius: 3px;
     font-size: 85%;
+}
+
+/* Research List Styles */
+.research-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.research-list-item {
+    padding: 20px;
+    border: 1px solid #edece9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.research-list-item:hover {
+    background-color: #f7f7f5;
+    border-color: #dbdbdb;
+}
+
+.research-list-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    color: #37352f;
+}
+
+.research-list-item p {
+    margin: 0;
+    color: #6a6a6a;
 }
