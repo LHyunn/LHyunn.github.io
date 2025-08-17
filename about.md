@@ -1,6 +1,12 @@
-# Changhyun Lee (이창현)
-
-A researcher passionate about solving real-world industrial challenges with AI and data-driven optimization.
+<div class="profile-container">
+  <div class="profile-image">
+    <img src="assets/profile.jpeg" alt="Changhyun Lee's profile picture">
+  </div>
+  <div class="profile-text">
+    <h1>Changhyun Lee (이창현)</h1>
+    <p>A researcher passionate about solving real-world industrial challenges with AI and data-driven optimization.</p>
+  </div>
+</div>
 
 ---
 

@@ -9,6 +9,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeLink = document.getElementById('home-link');
     const researchLink = document.getElementById('research-link');
     const aboutLink = document.getElementById('about-link');
+    const themeCheckbox = document.getElementById('theme-checkbox');
+
+    // --- Theme Management ---
+
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeCheckbox.checked = true;
+        } else {
+            document.body.classList.remove('dark-mode');
+            themeCheckbox.checked = false;
+        }
+    }
+
+    function toggleTheme() {
+        const newTheme = themeCheckbox.checked ? 'dark' : 'light';
+        localStorage.setItem('theme', newTheme);
+        applyTheme(newTheme);
+    }
+
+    // Initialize theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else if (prefersDark) {
+        applyTheme('dark');
+    } else {
+        applyTheme('light');
+    }
+
+    themeCheckbox.addEventListener('change', toggleTheme);
 
     // --- Core Functions ---
 

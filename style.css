@@ -12,6 +12,14 @@
     --transition-speed: 0.2s;
 }
 
+body.dark-mode {
+    --color-text: #EAEAEA;
+    --color-text-secondary: #AAAAAA;
+    --color-background: #121212;
+    --color-background-alt: #1E1E1E;
+    --color-border: #333333;
+}
+
 body {
     font-family: var(--font-primary);
     line-height: 1.7;
@@ -69,6 +77,77 @@ body {
 .header-nav a:hover svg {
     stroke: var(--color-accent);
 }
+
+/* --- Theme Switch Styles --- */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+.theme-switch {
+    display: inline-block;
+    height: 28px;
+    width: 52px;
+    position: relative;
+}
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 28px;
+    transition: background-color var(--transition-speed) ease;
+}
+.thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform var(--transition-speed) ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+input:checked + .slider {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+input:checked + .slider .thumb {
+    transform: translateX(24px);
+}
+
+/* Icons inside the thumb */
+.thumb svg {
+    position: absolute;
+    stroke: var(--color-text-secondary);
+    transition: opacity var(--transition-speed) ease;
+}
+#theme-icon-sun {
+    opacity: 1;
+}
+#theme-icon-moon {
+    opacity: 0;
+}
+input:checked + .slider #theme-icon-sun {
+    opacity: 0;
+}
+input:checked + .slider #theme-icon-moon {
+    opacity: 1;
+    stroke: #111111;
+}
+
 
 
 /* 3. LAYOUT & SIDEBAR */
@@ -155,6 +234,30 @@ body {
     margin-bottom: 1em;
 }
 #post-content h1 { font-size: 2.5em; }
+
+/* Profile Section in About page */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 2em;
+}
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-text h1 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.profile-text p {
+    font-size: 1.2em;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
 #post-content h2 { font-size: 2em; border-bottom: 1px solid var(--color-border); padding-bottom: 0.4em; }
 #post-content h3 { font-size: 1.5em; }
 #post-content h4 { font-size: 1.2em; }
