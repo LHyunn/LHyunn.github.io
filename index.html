@@ -1,17 +1,44 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나만의 웹사이트</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
-        h1 { color: #333; }
-        p { color: #666; }
-    </style>
+    <title>LHyunn's Blog</title>
+
+    <!-- Google Fonts: Inter and Noto Sans KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Highlight.js Theme (Atom One Light) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>안녕하세요! 👋</h1>
-    <p>저의 GitHub Pages 사이트에 오신 것을 환영합니다.</p>
+
+    <aside id="sidebar">
+        <h2>Posts</h2>
+        <ul id="post-list">
+            <!-- Post list will be dynamically generated here -->
+        </ul>
+    </aside>
+
+    <main id="content">
+        <article id="post-content">
+            <!-- Post content will be loaded here -->
+        </article>
+    </main>
+
+    <!-- Marked.js for Markdown to HTML conversion -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Highlight.js for code syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
 </body>
 </html>
