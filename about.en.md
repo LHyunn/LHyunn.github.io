@@ -4,7 +4,7 @@
   </div>
   <div class="profile-text">
     <h1>Changhyun Lee (이창현)</h1>
-    <p>A researcher passionate about solving real-world industrial challenges with AI and data-driven optimization.</p>
+    <p>I am conducting research to solve industrial problems through AI and data-driven optimization.</p>
   </div>
 </div>
 
@@ -54,10 +54,12 @@
 4. **Changhyun Lee**, Seonyeong Kim, Gyunyub Kim, Heejin Yoo, Sudong Lee. “Development of Virtual Defect Generation Technique for Deep Learning-Based Detection of Welded Steel Pipe Non-Destructive Testing Image Flaws”. *KIIE Spring Conference*, 2023 (Poster Presentation).
 
 ## Experience
-**Researcher** | AleconoLab Inc. | 2022.09 - 2023.01
+**Researcher** | AleconoLab Inc. | 2022.09 - 2023.01  
 **Undergraduate Researcher** | DaiS Lab, University of Ulsan | 2022.03 - 2024.02
 
 ## Awards and Honors
+- **Grand Prize (1st)**, 4th ICT Business Model Idea Competition
+- **Grand Prize (1st)**, Public Big Data and AI Utilization Competition
 - **3rd Place**, Hyundai Heavy Industries Digital Transformation Program (Dec 2022)
 - **Gold Award**, U-Challenge Festival (Nov 2022)
 

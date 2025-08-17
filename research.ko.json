@@ -1,0 +1,14 @@
+[
+    {
+        "title": "OHT 휠 이미지 기반 이상탐지",
+        "summary": "딥러닝과 데이터 증강을 이용한 반도체 제조 공정의 OHT 가이드 휠 이상탐지.",
+        "path": "_research/semes-oht-anomaly-detection.ko.md",
+        "category": "머신러닝"
+    },
+    {
+        "title": "LLM 기반 제조 공정 최적화",
+        "summary": "다단계 제조 공정에서 품질 예측 및 공정 경로 추천을 위한 언어 모델 기반 접근법.",
+        "path": "_research/manufacturing-process-optimization.ko.md",
+        "category": "최적화"
+    }
+]
